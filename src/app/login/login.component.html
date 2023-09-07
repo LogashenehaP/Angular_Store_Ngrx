@@ -1,0 +1,45 @@
+<section class="login-container">
+  <form #submitForm="ngForm" (submit)="LogInUser(); submitForm.reset()">
+    <div class="form-group">
+      <label for="username"> UserName </label>
+      <input
+        [(ngModel)]="newUsername"
+        type="text"
+        class="form-control"
+        id="username"
+        #username="ngModel"
+        name="userName"
+        [class.invalid]="username.invalid && username.touched"
+        ngModel
+        required
+      />
+      <div *ngIf="username.errors && username.touched">
+        <small *ngIf="username.errors.required" class="errorTag"
+          >Please , enter your username</small
+        >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password"> Password </label>
+      <input
+        [(ngModel)]="newPassword"
+        type="password"
+        class="form-control"
+        id="password"
+        #password="ngModel"
+        name="password"
+        [class.invalid]="password.invalid && password.touched"
+        ngModel
+        required
+      />
+      <div *ngIf="password.errors && password.touched">
+        <small *ngIf="password.errors.required" class="errorTag"
+          >Please , enter your password</small
+        >
+      </div>
+    </div>
+    <button type="submit" class="form-button" [disabled]="!submitForm.valid">
+      Login
+    </button>
+  </form>
+</section>

@@ -1,0 +1,41 @@
+.login-container {
+  width: 100%;
+  margin: 0 auto;
+  form {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      .form-control {
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid purple;
+      }
+      .invalid {
+        border: 1px solid red;
+      }
+      .errorTag {
+        color: red;
+      }
+    }
+    .form-button {
+      width: 10%;
+      padding: 8px;
+      background-color: purple;
+      border: 1px solid white;
+      border-radius: 20px;
+      color: white;
+      &:disabled {
+        background-color: plum;
+        color: white;
+      }
+    }
+  }
+}

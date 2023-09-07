@@ -1,0 +1,53 @@
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  li {
+    color: purple;
+    cursor: pointer;
+  }
+  .username {
+    color: plum;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 10px;
+    text-align: center;
+  }
+}
+.popup {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .buttons {
+    display: flex;
+    gap: 20px;
+    .form-button {
+      width: 100%;
+      padding: 8px;
+      background-color: purple;
+      border: 1px solid white;
+      border-radius: 20px;
+      color: white;
+      &:disabled {
+        background-color: plum;
+        color: white;
+      }
+    }
+  }
+}
+
+.text{
+  text-align: center;
+}

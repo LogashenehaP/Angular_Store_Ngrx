@@ -1,0 +1,20 @@
+<section>
+  <nav class="navBar">
+    <li>
+      Welcome |
+      <span class="username">{{ username }}</span>
+    </li>
+    <li routerLink="home">Home</li>
+    <li routerLink="blog">Blogs</li>
+    <li (click)="popUp()">Logout</li>
+  </nav>
+</section>
+<p class="text">Hey {{ username }}, You're into the dashboard component</p>
+<section class="popup" *ngIf="popup">
+  <div class="text">hey {{ username }} Are you sure you want to logout?</div>
+  <div class="buttons">
+    <button class="form-button" (click)="logOut()">Logout</button>
+    <button class="form-button" (click)="cancel()">cancel</button>
+  </div>
+</section>
+<router-outlet></router-outlet>
